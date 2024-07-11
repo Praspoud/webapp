@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd ${DOTNET_CLI_HOME} && dotnet restore'
+        //sh 'cd ${DOTNET_CLI_HOME} && dotnet restore'
 	sh 'dotnet restore'
       }
     }
