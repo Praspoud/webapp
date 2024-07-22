@@ -17,7 +17,7 @@ pipeline {
 	  sh '''
 	    cd /home/ubuntu/webapp1
 	    dotnet publish --configuration Release --output /home/ubuntu/webapp1/publish
-	    cp -r /home/ubuntu/webapp1/publish/* /var/www/webapp1
+	    sudo cp -r /home/ubuntu/webapp1/publish/* /var/www/webapp1
 	    cd /etc/systemd/system
 	    sudo systemctl stop webapp1.service
 	    sudo systemctl start webapp1.service
